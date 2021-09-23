@@ -63,7 +63,35 @@ function App() {
     }
   }
 
-  const charactersToRender = Object.keys(characters).map((character) => (<Card key={characters[character].id} name={character} handleClick={handleCardClick}/>));
+  // From Mike Bostock https://bost.ocks.org/mike/shuffle - implementation of Fisher Yates Shuffle in JS
+  function shuffleArray(array) {
+    let currentIndex = array.length, randomIndex;
+
+    // While there remain elements to shuffle
+    while (currentIndex !== 0) {
+      // Pick a remaining element
+      randomIndex = Math.floor(Math.random() * currentIndex);
+      currentIndex--;
+
+      // And swap it with the current element
+      [array[currentIndex], array[randomIndex]] = [array[randomIndex], array[currentIndex]];
+
+    }
+    return array;
+  }
+
+  const charactersToRender = () => {
+    return Object.keys(characters).map((character) => (<Card key={characters[character].id} name={character} handleClick={handleCardClick}/>));
+  }
+
+
+  const shuffleCharacterCards = () => {
+    const shuffledCharacters = shuffleArray(Object.keys(characters));
+    console.log(shuffledCharacters);
+    
+    return shuffledCharacters.map((character) => (<Card key={characters[character].id} name={character} handleClick={handleCardClick}/>));
+  }
+
 
   return (
     <div className="App">
@@ -78,7 +106,8 @@ function App() {
         <div className="instructions">Increase your score by clicking on an image, but if you click the same image twice, it's game over!</div>
         <div className="container">
           {/* Use container display grid to layout cards */}
-          {charactersToRender}
+          {charactersToRender()}
+          {shuffleCharacterCards()}
           {/* Each card should be a reused component 'card' with an image, name, and background */}
         </div>
       </main>
