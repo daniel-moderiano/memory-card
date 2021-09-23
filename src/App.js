@@ -1,11 +1,22 @@
 import './styles/App.css';
 import './styles/reset.css';
 import { Card } from './components/Card';
+import { useState } from 'react';
+import { nanoid } from 'nanoid';
+
 
 function App() {
 
+  const [characters, setCharacters] = useState({
+    cloud: false,
+    mario: false,
+    kirby: false,
+    'donkey kong': false,
+  });
 
-
+  const charactersToRender = () => {
+    return Object.keys(characters).map((character) => (<Card key={nanoid()} char={character.toUpperCase()}/>));
+  }
 
   return (
     <div className="App">
@@ -20,7 +31,7 @@ function App() {
         <div className="instructions">Increase your score by clicking on an image, but if you click the same image twice, it's game over!</div>
         <div className="container">
           {/* Use container display grid to layout cards */}
-          <Card char={'Cloud'}/>
+          {charactersToRender()}
           {/* Each card should be a reused component 'card' with an image, name, and background */}
         </div>
       </main>
