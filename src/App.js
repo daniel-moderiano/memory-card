@@ -18,6 +18,7 @@ import dk from './images/dk.png';
 import { Card } from './components/Card';
 import { useEffect, useState } from 'react';
 import { nanoid } from 'nanoid';
+import { Scoreboard } from './components/Scoreboard';
 
 
 function App() {
@@ -86,6 +87,7 @@ function App() {
   });
 
   const [currentScore, setCurrentScore] = useState(0);
+  const [bestScore, setBestScore] = useState(0);
 
   useEffect(() => {
     if (currentScore === (Object.keys(characters)).length) {
@@ -148,10 +150,7 @@ function App() {
     <div className="App">
       <header className="header">
         <h1 className="header__title">Memory Game</h1>
-        <div className="scoreboard">
-          {/* Component to display current score */}
-          {/* Component to display best score - may be combined with above? */}
-        </div>
+        <Scoreboard best={bestScore} current={currentScore}/>
       </header>
       <main className="main">
         <div className="instructions">Increase your score by clicking on an image, but if you click the same image twice, it's game over!</div>
