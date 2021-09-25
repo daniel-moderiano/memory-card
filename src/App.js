@@ -111,6 +111,12 @@ function App() {
 
   const resetCurrentScore = () => setCurrentScore(0);
 
+  const calculateBestScore = () => {
+    if (currentScore >= bestScore) {
+      setBestScore(bestScore + 1);
+    }
+  }
+
   const handleCardClick = (characterName) => {
     if (characters[characterName].clicked) {
       resetCurrentScore();
@@ -118,8 +124,8 @@ function App() {
     } else {
       markCharacterAsClicked(characterName);
       incrementCurrentScore();
+      calculateBestScore();
     }
-
   }
 
   // From Mike Bostock https://bost.ocks.org/mike/shuffle - implementation of Fisher Yates Shuffle in JS
