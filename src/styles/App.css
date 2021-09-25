@@ -3,8 +3,8 @@ body {
 }
 
 .card {
-  width: 5rem;
-  height: 5rem;
+  width: 250px;
+  height: 250px;
   background-color: rgb(158, 243, 158);
   margin: 1rem;
   display: flex;
@@ -22,5 +22,10 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr;
   width: 15rem;
+}
+
+.card__img {
+  width: 200px;
+  height: 200px;
 }
 
