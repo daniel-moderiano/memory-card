@@ -1,0 +1,32 @@
+{
+  "files": {
+    "main.css": "/daniel-moderiano/memory-card/static/css/main.5fdb1ca9.chunk.css",
+    "main.js": "/daniel-moderiano/memory-card/static/js/main.6dbed2eb.chunk.js",
+    "main.js.map": "/daniel-moderiano/memory-card/static/js/main.6dbed2eb.chunk.js.map",
+    "runtime-main.js": "/daniel-moderiano/memory-card/static/js/runtime-main.32288b9f.js",
+    "runtime-main.js.map": "/daniel-moderiano/memory-card/static/js/runtime-main.32288b9f.js.map",
+    "static/js/2.3980f53f.chunk.js": "/daniel-moderiano/memory-card/static/js/2.3980f53f.chunk.js",
+    "static/js/2.3980f53f.chunk.js.map": "/daniel-moderiano/memory-card/static/js/2.3980f53f.chunk.js.map",
+    "index.html": "/daniel-moderiano/memory-card/index.html",
+    "static/css/main.5fdb1ca9.chunk.css.map": "/daniel-moderiano/memory-card/static/css/main.5fdb1ca9.chunk.css.map",
+    "static/js/2.3980f53f.chunk.js.LICENSE.txt": "/daniel-moderiano/memory-card/static/js/2.3980f53f.chunk.js.LICENSE.txt",
+    "static/media/bowser.2f2ab888.png": "/daniel-moderiano/memory-card/static/media/bowser.2f2ab888.png",
+    "static/media/diddy.2fe8b49b.png": "/daniel-moderiano/memory-card/static/media/diddy.2fe8b49b.png",
+    "static/media/dk.cbf38d58.png": "/daniel-moderiano/memory-card/static/media/dk.cbf38d58.png",
+    "static/media/fox.851c077e.png": "/daniel-moderiano/memory-card/static/media/fox.851c077e.png",
+    "static/media/ike.43813db5.png": "/daniel-moderiano/memory-card/static/media/ike.43813db5.png",
+    "static/media/isabelle.60c1d3e4.png": "/daniel-moderiano/memory-card/static/media/isabelle.60c1d3e4.png",
+    "static/media/joker.0fd95c93.png": "/daniel-moderiano/memory-card/static/media/joker.0fd95c93.png",
+    "static/media/link.5dbb2c05.png": "/daniel-moderiano/memory-card/static/media/link.5dbb2c05.png",
+    "static/media/luigi.487fbe69.png": "/daniel-moderiano/memory-card/static/media/luigi.487fbe69.png",
+    "static/media/mario.ec02cc8b.png": "/daniel-moderiano/memory-card/static/media/mario.ec02cc8b.png",
+    "static/media/peach.173a5f55.png": "/daniel-moderiano/memory-card/static/media/peach.173a5f55.png",
+    "static/media/wario.f0a3e572.png": "/daniel-moderiano/memory-card/static/media/wario.f0a3e572.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.32288b9f.js",
+    "static/js/2.3980f53f.chunk.js",
+    "static/css/main.5fdb1ca9.chunk.css",
+    "static/js/main.6dbed2eb.chunk.js"
+  ]
+}
