@@ -14,7 +14,6 @@ import wario from './images/wario.png';
 import joker from './images/joker.png';
 import dk from './images/dk.png';
 
-
 import { Card } from './components/Card';
 import { useEffect, useState } from 'react';
 import { nanoid } from 'nanoid';
@@ -108,10 +107,6 @@ function App() {
     setCharacters(newState);
   }
 
-  const incrementCurrentScore = () => setCurrentScore(currentScore + 1);
-
-  const resetCurrentScore = () => setCurrentScore(0);
-
   const calculateBestScore = () => {
     if (currentScore >= bestScore) {
       setBestScore(bestScore + 1);
@@ -120,11 +115,11 @@ function App() {
 
   const handleCardClick = (characterName) => {
     if (characters[characterName].clicked) {
-      resetCurrentScore();
+      setCurrentScore(0);
       markAllCharactersAsUnclicked();
     } else {
       markCharacterAsClicked(characterName);
-      incrementCurrentScore();
+      setCurrentScore(currentScore + 1);
       calculateBestScore();
     }
   }
@@ -162,15 +157,11 @@ function App() {
       <main className="main">
         <div className="instructions">Increase your score by clicking on an image, but if you click the same image twice, it's game over!</div>
         <div className="container">
-          {/* Use container display grid to layout cards */}
           {shuffleCharacterCards()}
-          {/* Each card should be a reused component 'card' with an image, name, and background */}
         </div>
       </main>
     </div>
   );
 }
-
-
 
 export default App;

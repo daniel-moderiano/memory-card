@@ -1,6 +1,5 @@
 
 export const Card = (props) => {
-
   return (
     <div className="card" onClick={() => {props.handleClick(props.name)}}>
       <div className="card__container">
