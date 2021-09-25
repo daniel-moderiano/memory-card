@@ -89,9 +89,10 @@ function App() {
   const [currentScore, setCurrentScore] = useState(0);
   const [bestScore, setBestScore] = useState(0);
 
+  // Optionally handle the scenario where the player successfully 'completes' the game 
   useEffect(() => {
     if (currentScore === (Object.keys(characters)).length) {
-      alert('Max score reached, well done! Play again?');
+      alert('Max score reached, well done! Press any character card to restart');
     }
   });
 
